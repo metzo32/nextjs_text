@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
@@ -28,6 +29,11 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <nav className="navBar">
+          <Link href="/">홈</Link>
+          <Link href="/list">리스트</Link>
+          <Link href="/cart">장바구니</Link>
+        </nav>
         {children}
       </body>
     </html>

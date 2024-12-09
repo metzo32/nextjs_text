@@ -19,3 +19,56 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@layer base {
+  h1 {
+    @apply text-3xl text-red-500 text-center;
+  }
+
+  h2 {
+    @apply text-xl;
+  }
+
+  a {
+    @apply text-xl;
+  }
+
+  button {
+    @apply
+    px-3 py-1 rounded-md
+    bg-yellow-200 text-green-700
+
+    hover:bg-yellow-500
+  }
+}
+
+@layer utilities {
+  .main {
+    @apply w-full
+    flex flex-col justify-center items-center;
+  }
+
+  .product-box {
+    @apply bg-green-700 p-5 mt-5
+    w-64 min-h-48 rounded-md;
+  }
+
+  .navBar {
+    @apply w-full h-32 bg-gray-900 px-96 mb-16
+    flex justify-between items-center;
+  }
+
+  .stock {
+    @apply text-orange-300;
+  }
+
+  .product-img {
+    @apply w-full h-24 object-cover;
+  }
+
+  .cart {
+    @apply w-full h-auto px-96 py-5
+    border-b border-white
+    flex justify-between items-center;
+  }
+}
